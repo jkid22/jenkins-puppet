@@ -9,4 +9,11 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
      vb.memory = "1024"
   end
+
+
+  config.vm.provision :puppet do |puppet|
+	  puppet.manifest_path = "puppets/manifests"
+	  puppet.manifest_file = "site.pp"
+	  puppet.module_path = "puppets/modules"
+  end
 end
