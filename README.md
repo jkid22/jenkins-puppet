@@ -92,7 +92,9 @@ By removing redundant configuration tasks the deployment speed increases, reduce
 I built my understanding of the tools and deployment steps using web resources.  I used three sites to build the majority of my expertise:
 
 https://github.com/patrickdlee/vagrant-examples - Vagrant/Puppet
+
 https://docs.puppet.com/ - Puppet Documentaton and Commands
+
 https://wiki.jenkins-ci.org/display/JENKINS/Install+Jenkins+with+Puppet - Puppet Jenkins and Ubuntu Load
 
 ###Value of Automation
