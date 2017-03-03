@@ -26,7 +26,7 @@
 
 **Note:** It is not sufficient to forward port 8000 on either the host or the guest OS to the default jenkins port.  Jenkins itself must be configured to listen to port 8000.
 
-## Setup - Automate the Build
+## Automate the Build
 
 All testing of the environment occured on Windows 10, Github Bash, and Vagrant.
 
