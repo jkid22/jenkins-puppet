@@ -26,6 +26,18 @@
 
 ### vagrant configuration
 
+The technical challenge solution leverages Vagrant VirtualBox to build a base image with puppet integration.  The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.
+
+
+https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet
+
+To pull the image and build the initial box, the following command execution is required.
+
+```puppet
+vagrant init puppetlabs/ubuntu-16.04-64-puppet
+```
+
+
 * Your system's `preferences` file and `preferences.d` directory
 * Your system's `sources.list` file and `sources.list.d` directory
 * System repositories
