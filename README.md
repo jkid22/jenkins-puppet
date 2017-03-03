@@ -49,7 +49,6 @@ https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet
 To pull the image and build the initial box, the following command execution is required.
 
 ```puppet
-vagrant init puppetlabs/ubuntu-16.04-64-puppet
 vagrant up
 ```
 
