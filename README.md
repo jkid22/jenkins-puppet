@@ -3,10 +3,10 @@
 #### Table of Contents
 
 
-2. [Technical Challenge - Description](#technical-challenge)
+2. [Technical Challenge](#technical-challenge)
 3. [Setup - Automate the Build](#setup)
     * [github repository](#github-repository)
-    * [vagrant configuration](#puppet-configuration)
+    * [vagrant configuration](#vagrant-configuration)
     * [puppet configuration](#puppet-configuration)
 
 4. [Questions](#questions)
