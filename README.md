@@ -5,7 +5,7 @@
 
 2. [Technical Challenge - Description](#technical-challenge)
 3. [Setup - Use Vagrant to build an environment using Puppet](#setup)
-    * [Vagrant Configuration](#vagrant-configuration)
+    * [GitHub Repository](#github-repository)
     * [Puppet Manifest and Modules](#puppet-configuration)
 4. [Questions](#questions)
     * [Implementation Hurdles](#implementation-hurdles)
@@ -24,9 +24,18 @@
 
 **Note:** It is not sufficient to forward port 8000 on either the host or the guest OS to the default jenkins port.  Jenkins itself must be configured to listen to port 8000.
 
+### github repository
+
+The solution leverages Vagrant and Puppet to orchestrate the answer to the technical challenge.  A GitHub repository at https://github.com/cdrobey/jenkins-puppet contains the vagrant and puppet agent configuration files.
+
+Cloning the repository provides the simpliest path to succcess.  
+
+```puppet
+git clone https://github.com/cdrobey/jenkins-puppet.git
+```
 ### vagrant configuration
 
-The technical challenge solution leverages Vagrant VirtualBox to build a base image with puppet integration.  The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.
+The solution leverages Vagrant VirtualBox to build a base image with puppet integration.  The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.
 
 
 https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet
@@ -36,14 +45,6 @@ To pull the image and build the initial box, the following command execution is 
 ```puppet
 vagrant init puppetlabs/ubuntu-16.04-64-puppet
 ```
-
-
-* Your system's `preferences` file and `preferences.d` directory
-* Your system's `sources.list` file and `sources.list.d` directory
-* System repositories
-* Authentication keys
-
-**Note:** This module offers `purge` parameters which, if set to 'true', **destroy** any configuration on the node's `sources.list(.d)` and `preferences(.d)` that you haven't declared through Puppet. The default for these parameters is 'false'.
 
 ### puppet configuration
 
