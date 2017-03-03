@@ -28,6 +28,8 @@
 
 ## Setup - Automate the Build
 
+All testing of the environment occured on Windows 10, Vagrant, Github Bash, and Vagrant.
+
 ### github repository
 
 The solution leverages Vagrant and Puppet to orchestrate the answer to the technical challenge.  A GitHub repository at https://github.com/cdrobey/jenkins-puppet contains the vagrant and puppet agent configuration files.
@@ -39,7 +41,7 @@ git clone https://github.com/cdrobey/jenkins-puppet.git
 ```
 ### vagrant configuration
 
-The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.
+The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.  
 
 
 https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet
