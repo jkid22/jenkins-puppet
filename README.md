@@ -4,9 +4,11 @@
 
 
 2. [Technical Challenge - Description](#technical-challenge)
-3. [Setup - Use Vagrant to build an environment using Puppet](#setup)
-    * [GitHub Repository](#github-repository)
-    * [Puppet Manifest and Modules](#puppet-configuration)
+3. [Setup - Automate the Build](#setup)
+    * [github repository](#github-repository)
+    * [vagrant configuration](#puppet-configuration)
+    * [puppet configuration](#puppet-configuration)
+
 4. [Questions](#questions)
     * [Implementation Hurdles](#implementation-hurdles)
     * [Importance of Ephemeral Builds](#rebuild)
@@ -24,6 +26,8 @@
 
 **Note:** It is not sufficient to forward port 8000 on either the host or the guest OS to the default jenkins port.  Jenkins itself must be configured to listen to port 8000.
 
+## Setup - Automate the Build
+
 ### github repository
 
 The solution leverages Vagrant and Puppet to orchestrate the answer to the technical challenge.  A GitHub repository at https://github.com/cdrobey/jenkins-puppet contains the vagrant and puppet agent configuration files.
@@ -35,7 +39,7 @@ git clone https://github.com/cdrobey/jenkins-puppet.git
 ```
 ### vagrant configuration
 
-The solution leverages Vagrant VirtualBox to build a base image with puppet integration.  The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.
+The VagrantFile uses a native build of Ubuntu 16.04 LTS from the puppetlab vagrant repository.
 
 
 https://atlas.hashicorp.com/puppetlabs/boxes/ubuntu-16.04-64-puppet
@@ -46,13 +50,12 @@ To pull the image and build the initial box, the following command execution is 
 vagrant init puppetlabs/ubuntu-16.04-64-puppet
 ```
 
+The VagrantFile configures the VM including mapping Port 8000 from the guest vm to the localhost network.  Additionally, Puppet manifest are loaded from the Vagrant shared folder and mapped to a manifest/module directory path.
+
 ### puppet configuration
 
-To use the apt module with default parameters, declare the `apt` class.
+Vagrant automates the steps to build the Jenkins server using puppet agent.  
 
-```puppet
-include apt
-```
+The site.pp manifest uses a Jenkins class to setup an apt repository and install the Jenkins Server.  The steps to build the site.pp are located at https://wiki.jenkins-ci.org/display/JENKINS/Puppet.
 
-**Note:** The main `apt` class is required by all other classes, types, and defined types in this module. You must declare it whenever you use the module.
-## Usage
+The site.pp class integrates the port modifications from 8080->8000.  The services default start file is modified using commands from the stdlib module.
