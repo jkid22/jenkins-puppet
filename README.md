@@ -4,14 +4,14 @@
 
 
 2. [Technical Challenge](#technical-challenge)
-3. [Setup - Automate the Build](#setup)
+3. [Setup - Automate the Build](#setup-automate-the-build)
     * [github repository](#github-repository)
     * [vagrant configuration](#vagrant-configuration)
     * [puppet configuration](#puppet-configuration)
 
 4. [Questions](#questions)
     * [Implementation Hurdles](#implementation-hurdles)
-    * [Importance of Ephemeral Builds](#rebuild)
+    * [Ephemeral Builds](#ephemeral-builds)
     * [Information Hunt](#information-hunt)
     * [Value of Automation](#value-of-automation)
 
@@ -75,8 +75,7 @@ I struggled with the idea of reusing puppet configuration code from the Jenkins 
 
 The exercise quickly demonstrated the value of the collaborative nature of the Puppet Community and my need to overcome my conditioning from working in legacy companies. 
 
-
-###Importance of Ephemeral Builds
+###Ephemeral Builds
 
 ***Question:*** Please explain why requirement (d) above is important.
 
