@@ -8,10 +8,6 @@
     * [Vagrant Configuration](#vagrant-configuration)
     * [Puppet Manifest and Modules](#puppet-configuration)
 4. [Questions](#questions)
-Describe the most difficult hurdle you had to overcome in implementing your solution.
-Please explain why requirement (d) above is important.
-Where did you go to find information to help you?
-Briefly explain what automation means to you, and why it is important to an organization's infrastructure design strategy.
     * [Implementation Hurdles](#implementation-hurdles)
     * [Importance of Ephemeral Builds](#rebuild)
     * [Information Hunt](#information-hunt)
@@ -19,13 +15,18 @@ Briefly explain what automation means to you, and why it is important to an orga
 
 ## Technical Challenge
 
-The apt module lets you use Puppet to manage Apt sources, keys, and other configuration options.
+Objective: Automate the installation and configuration of the jenkins CI server.
 
-Apt (Advanced Package Tool) is a package manager available on Debian, Ubuntu, and several other operating systems. The apt module provides a series of classes, defines, types, and facts to help you automate Apt package management.
+Requirements:
+* The solution must run on a clean installation of the chosen operating system
+* Jenkins and its prerequisites must be installed without a manual intervention.
+* Jenkins must be configured to serve request over port 8000.
 
-**Note**: For this module to correctly autodetect which version of Debian/Ubuntu (or derivative) you're running, you need to make sure the 'lsb-release' package is installed. We highly recommend you either make this part of your provisioning layer, if you run many Debian or derivative systems, or ensure that you have Facter 2.2.0 or later installed, which will pull this dependency in for you.
+**Note:** It is not sufficient to forward port 8000 on either the host or the guest OS to the default jenkins port.  Jenkins itself must be configured to listen to port 8000.
 
-## Setup
+
+
+
 
 ### vagrant configuration
 
