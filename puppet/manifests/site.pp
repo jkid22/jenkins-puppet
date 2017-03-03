@@ -1,3 +1,13 @@
+#  File: site.pp
+#
+#  Use: Setup Jenkins Server
+#
+#  Description: Installs jenkins from official repository and remaps port 8080 to 8000.
+#
+#  Note: Vagrant must forward port 8000 to the local host
+#
+#  Command: None
+
 class jenkins {
 
     # get key
