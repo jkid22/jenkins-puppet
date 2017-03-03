@@ -15,18 +15,14 @@
 
 ## Technical Challenge
 
-Objective: Automate the installation and configuration of the jenkins CI server.
+**Objective:** Automate the installation and configuration of the Jenkins CI server.
 
-Requirements:
+**Requirements:**
 * The solution must run on a clean installation of the chosen operating system
 * Jenkins and its prerequisites must be installed without a manual intervention.
 * Jenkins must be configured to serve request over port 8000.
 
 **Note:** It is not sufficient to forward port 8000 on either the host or the guest OS to the default jenkins port.  Jenkins itself must be configured to listen to port 8000.
-
-
-
-
 
 ### vagrant configuration
 
