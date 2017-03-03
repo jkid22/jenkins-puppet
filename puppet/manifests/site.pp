@@ -1,4 +1,5 @@
 class jenkins {
+
     # get key
     exec { 'install_jenkins_key':
         command => '/usr/bin/wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | /usr/bin/apt-key add -',
@@ -25,11 +26,22 @@ class jenkins {
         require => Exec['apt-get update'],
     }
 
-    # jenkins service
     service { 'jenkins':
-        ensure  => running,
+        ensure  => 'running',
+        enable  => true,
         require => Package['jenkins'],
     }
+
+
+    # jenkin port modification 8080=>8000
+    file_line {'jenkins_port':
+        notify  => Service['jenkins'],
+        ensure => present,
+        path => '/etc/default/jenkins',
+        line => 'HTTP_PORT=8000',
+        match => '^HTTP_PORT=8080',
+    }
+
 }
 
 include jenkins
