@@ -104,10 +104,10 @@ https://wiki.jenkins-ci.org/display/JENKINS/Install+Jenkins+with+Puppet - Puppet
 
 The ability to drive consistency and simplicity throughout IT minimizes the surface area for failure.  Four key benefits arise from the ability minimize configuration drift in infrastructure.  
 
-*Compliance - Provides measurable and documented source code control for auditing
-*Test - Assures all systems complete QA prior to production release repeatable delivery process
-*Sustainable - Allows the deployment and scaling of identical system as capacity requirements change
-*Documented - Provides a single source of truth across platform and software.  
+* Compliance - Provides measurable and documented source code control for auditing
+* Test - Assures all systems complete QA prior to production release repeatable delivery process
+* Sustainable - Allows the deployment and scaling of identical system as capacity requirements change
+* Documented - Provides a single source of truth across platform and software.  
 
 Mechanizing change management aligns the management team to a predictable long-term plan and generates higher velocity.
 
