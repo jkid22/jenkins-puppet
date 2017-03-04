@@ -77,7 +77,7 @@ The exercise quickly demonstrated the value of the collaborative nature of the P
 
 ***Question:*** Please explain why requirement (d) above is important.
 
-The ability to reapply without error ensures a known good state across infrastructure devices.  Whether the system remains untouched or suffered signficiant change the reapplication of the configuration places the system into a pristine condition.  In the worse case scenario, a redeployed OS template/image allows CM pushes of code matching the original server.
+The ability to reapply without error ensures a known good state across infrastructure devices.  Whether the system remains untouched or suffered signficiant change the reapplication of the configuration places the system into a pristine condition.  In the worse case scenario, a redeployed OS template/image allows CM pushes of code that matches the original server.
 
 By removing redundant configuration tasks the deployment speed increases, reduces the statiscal probability of error, and simplifies long-term device maintenance.  A regular workflow focused on refactoring code removes unwanted complexity and signficantly increases readability improving long-term maintainence. 
 
