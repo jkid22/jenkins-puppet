@@ -32,7 +32,7 @@ git clone "$REPOSITORY"
 if [ $? -eq  0 ]; then
 	cd "$WORKINGDIR"
 	if [ $? -eq 0 ]; then
-		vagrant box add puppetlabs/ubuntu-16.04-64-puppet --provider virtualbox
+		vagrant box add puppetlabs/ubuntu-16.04-64-puppet --provider virtualbox --force
 		vagrant up
 	fi
 else
