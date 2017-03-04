@@ -32,7 +32,7 @@ All testing of the environment occured on Windows 10, Github Bash, and Vagrant. 
 
 ### github repository
 
-The solution leverages Vagrant and Puppet to orchestrate the answer to the technical challenge.  A GitHub repository at https://github.com/cdrobey/jenkins-puppet contains the vagrant and puppet agent configuration files.
+A GitHub repository at https://github.com/cdrobey/jenkins-puppet contains the vagrant and puppet agent configuration files.
 
 Cloning the repository provides the simpliest path to succcess.  
 
