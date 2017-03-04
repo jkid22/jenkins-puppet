@@ -67,7 +67,7 @@ Additionally, the site.pp integrates the port modifications from 8080->8000.  Th
 
 ***Question:*** Describe the most difficult hurdle you had to overcome in implementing your solution.
 
-I started the exercise by immersing myself in Vagrant documentation, since I had not used it.  After spending several hours on building a Vagrant environment in Windows, I migrated to automating with Puppet.
+I started the exercise by immersing myself in Vagrant documentation, since I had not used it.  After spending several hours on building a Vagrant environment in Windows, I started bootstrapping with Puppet.
 
 I struggled with the idea of reusing puppet configuration code from the Jenkins Wiki.  My natural instinct led me to build the solution from the ground up.  Open Source encourages leveraging existing work to simplify the effort.  After recognizing my inhibition, I used example code as my starting point and added the required stdlib line changes to remap the port of the Jenkins Server.
 
