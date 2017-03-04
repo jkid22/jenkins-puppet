@@ -58,7 +58,7 @@ The VagrantFile configures the VM including mapping Port 8000 from the guest vm 
 
 The site.pp manifest uses a Jenkins class to setup an apt repository and install the Jenkins Server.  The steps to build the site.pp are located at https://wiki.jenkins-ci.org/display/JENKINS/Puppet.
 
-Additinally, the site.pp integrates the port modifications from 8080->8000.  The manifest uses the stdlib puppet module to change the default port setting in the configuration file, /etc/default/jenkins, to port 8000.
+Additionally, the site.pp integrates the port modifications from 8080->8000.  The manifest uses the stdlib puppet module to change the default port setting in the configuration file, /etc/default/jenkins, to port 8000.
 
 
 ## Questions
